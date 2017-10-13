@@ -20,9 +20,4 @@ class HomeController {
         return ResponseEntity(sorryMessagesService.getRandom(), HttpStatus.OK)
     }
 
-    @PostMapping("/")
-    fun addSorryMessage(sorryMessage: SorryMessage) {
-        sorryMessagesService.add(sorryMessage)
-    }
-
 }
