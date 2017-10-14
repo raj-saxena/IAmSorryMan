@@ -20,9 +20,13 @@ class HomeController {
         return ResponseEntity(sorryMessagesService.getRandom(), HttpStatus.OK)
     }
 
+    @GetMapping("/list")
+    fun getAllSorryMessages() : ResponseEntity<List<SorryMessage>>  {
+        return ResponseEntity(sorryMessagesService.getSorries(), HttpStatus.OK)
+    }
+
     @PostMapping("/")
     fun addSorryMessage(sorryMessage: SorryMessage) {
         sorryMessagesService.add(sorryMessage)
     }
-
 }

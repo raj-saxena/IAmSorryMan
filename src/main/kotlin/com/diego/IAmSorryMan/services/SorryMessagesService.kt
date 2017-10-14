@@ -5,5 +5,5 @@ import com.diego.IAmSorryMan.models.SorryMessage
 interface SorryMessagesService {
     fun add(sorryMessage: SorryMessage)
     fun getRandom() : SorryMessage
-    fun getSorries(numberOfSorries : Set<SorryMessage>) : SorryMessage
+    fun getSorries() : List<SorryMessage>
 }
