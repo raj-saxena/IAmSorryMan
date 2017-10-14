@@ -15,7 +15,7 @@ class SorryMessagesServiceImpl : SorryMessagesService {
         return sorryMessageStore.elementAt(Random().nextInt(sorryMessageStore.size))
     }
 
-    override fun getSorries(numberOfSorries: Set<SorryMessage>): SorryMessage {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun getSorries(): List<SorryMessage> {
+        return sorryMessageStore.toList()
     }
 }
