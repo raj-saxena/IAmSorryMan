@@ -6,4 +6,5 @@ interface SorryMessagesService {
     fun add(sorryMessage: SorryMessage)
     fun getRandom() : SorryMessage
     fun getSorries() : List<SorryMessage>
+    fun clearAll()
 }

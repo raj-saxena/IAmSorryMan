@@ -1,8 +1,10 @@
 package com.diego.IAmSorryMan.services
 
 import com.diego.IAmSorryMan.models.SorryMessage
+import org.springframework.stereotype.Component
 import java.util.*
 
+@Component
 class SorryMessagesServiceImpl : SorryMessagesService {
 
     private var sorryMessageStore : HashSet<SorryMessage> = HashSet()
@@ -17,5 +19,9 @@ class SorryMessagesServiceImpl : SorryMessagesService {
 
     override fun getSorries(): List<SorryMessage> {
         return sorryMessageStore.toList()
+    }
+
+    override fun clearAll() {
+        sorryMessageStore.clear()
     }
 }
