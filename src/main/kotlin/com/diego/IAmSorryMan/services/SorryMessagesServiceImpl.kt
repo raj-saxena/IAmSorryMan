@@ -20,4 +20,8 @@ class SorryMessagesServiceImpl : SorryMessagesService {
     override fun getSorries(): List<SorryMessage> {
         return sorryMessageStore.toList()
     }
+
+    override fun clearAll() {
+        sorryMessageStore.clear()
+    }
 }

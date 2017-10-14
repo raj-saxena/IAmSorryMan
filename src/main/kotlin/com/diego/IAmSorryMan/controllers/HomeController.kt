@@ -29,4 +29,9 @@ class HomeController {
     fun addSorryMessage(sorryMessage: SorryMessage) {
         sorryMessagesService.add(sorryMessage)
     }
+
+    @PostMapping("/clear")
+    fun clearSorryMessages() {
+        sorryMessagesService.clearAll()
+    }
 }
